@@ -6,7 +6,7 @@ cd /etc/wireguard
 rm -rf ./clients
 
 # Zero IP counter
-echo "1" > last_used_ip.var
+echo "1" >last_used_ip.var
 
 # Resetting the server configuration template to default settings
 cp -f wg0.conf.def wg0.conf
