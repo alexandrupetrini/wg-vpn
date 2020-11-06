@@ -10,7 +10,7 @@ cd wireguard_aws
 sudo ./full-setup.sh
 ```
 
-The `full-setup.sh` script removes the previous Wireguard installation (if any) using the `full-remove.sh` script. It then installs and configures the Wireguard service using the `install.sh` script. And then creates a client using the `add-client.sh` script.
+The `full-setup.sh` script removes the previous Wireguard installation (if any) using the `full-remove.sh` script. It then installs and configures the Wireguard service using the `install-server.sh` script. And then creates a client using the `add-client.sh` script.
 
 ### Add new customer
 `add-client.sh` - Script to add a new VPN client. As a result of the execution, it creates a configuration file ($CLIENT_NAME.conf) on the path ./clients/$CLIENT_NAME/, displays a QR code with the configuration.

@@ -4,7 +4,7 @@ echo "# Installing Wireguard"
 
 ./full-remove.sh
 
-./install.sh
+./install-server.sh
 
 ./add-client.sh
 
