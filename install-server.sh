@@ -19,7 +19,7 @@ SERVER_PUBKEY=$(echo $SERVER_PRIVKEY | wg pubkey)
 echo $SERVER_PUBKEY >./server_public.key
 echo $SERVER_PRIVKEY >./server_private.key
 
-read -p "Enter the server endpoint (external ip and port) in format [ipv4:port] (e.g. 4.3.2.1:54321):" ENDPOINT
+read -p "Enter the server endpoint (external ip and port) in format [ipv4:port] (e.g. 4.3.2.1:51820):" ENDPOINT
 if [ -z $ENDPOINT ]; then
   echo "[#]Empty endpoint. Exit"
   exit 1
@@ -27,7 +27,7 @@ fi
 echo $ENDPOINT >./endpoint.var
 
 if [ -z "$1" ]; then
-  read -p "Enter the server address in the VPN subnet (CIDR format), [ENTER] set to default: 10.50.0.1: " SERVER_IP
+  read -p "Enter the server address in the VPN subnet (CIDR format), [ENTER] set to default: 10.0.0.1: " SERVER_IP
   if [ -z $SERVER_IP ]; then
     SERVER_IP="10.0.0.1"
   fi
