@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $(id -u) -ne 0 ]]; then
+  echo "Please run as root"
+  exit 1
+fi
+
 # We read from the input parameter the name of the client
 if [ -z "$1" ]; then
   read -p "Enter VPN user name: " USERNAME
