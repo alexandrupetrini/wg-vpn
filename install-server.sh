@@ -27,9 +27,9 @@ fi
 echo $ENDPOINT >./endpoint.var
 
 if [ -z "$1" ]; then
-  read -p "Enter the server address in the VPN subnet (CIDR format), [ENTER] set to default: 10.0.0.1: " SERVER_IP
+  read -p "Enter the server address in the VPN subnet (CIDR format), [ENTER] set to default: 10.1.0.1: " SERVER_IP
   if [ -z $SERVER_IP ]; then
-    SERVER_IP="10.0.0.1"
+    SERVER_IP="10.1.0.1"
   fi
 else
   SERVER_IP=$1
